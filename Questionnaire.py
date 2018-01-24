@@ -1,4 +1,4 @@
-print('\033[1m' + "Beck's Depression inventory")
+print("Beck's Depression inventory")
 total = []
 category = ['Sadness',
             'Pessimism',
@@ -117,7 +117,7 @@ def questions():
     while rounds < 21:
         print('Question ')
         print(rounds + 1)
-        print('\033[1m' + category[rounds] + ':')
+        print(category[rounds] + ':')
         print('0 :' + ans0[rounds])
         print('1 :' + ans1[rounds])
         print('2 :' + ans2[rounds])
