@@ -1,3 +1,5 @@
+import time
+
 print("Beck's Depression inventory")
 total = []
 category = ['Sadness',
@@ -137,15 +139,31 @@ def questions():
 
 
 questions()
-if 1<= sum(total) <= 10:
+
+progress = open("progress.txt", "w")
+if 1 <= sum(total) <= 10:
     print('Normal ups and downs')
-elif 11<= sum(total) <= 16:
+    progress.write(time.ctime() + " SCORE:" + sum(total) + " MOOD: Normal ups and downs" + "\n")
+
+elif 11 <= sum(total) <= 16:
     print('Mild mood disturbance')
-elif 17<= sum(total) <= 20:
+    progress.write(time.ctime() + " SCORE:" + sum(total) + " MOOD: Mild mood disturbance" + "\n")
+
+elif 17 <= sum(total) <= 20:
     print('Borderline Depression')
-elif 21<= sum(total) <= 30:
+    progress.write(time.ctime() + " SCORE:" + sum(total) + " MOOD: Borderline Depression" + "\n")
+
+elif 21 <= sum(total) <= 30:
     print('Moderate Depression')
-elif 31<= sum(total) <= 40:
+    progress.write(time.ctime() + " SCORE:" + sum(total) + " MOOD: Borderline Depression" + "\n")
+
+elif 31 <= sum(total) <= 40:
     print('Severe Depression')
-elif 40<= sum(total):
+    progress.write(time.ctime() + " SCORE:" + sum(total) + " MOOD: Severe Depression" + "\n")
+
+elif 40 <= sum(total):
     print('Extreme Depression')
+    progress.write(time.ctime() + " SCORE:" + sum(total) + " MOOD: Extreme Depression" + "\n")
+
+progress.close()
+
