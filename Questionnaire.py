@@ -157,33 +157,37 @@ def questions():
         print(sum(total))
 
 
-questions()
+def write_progress_file(file_name="progress.txt"):
+    """Progress file is OVERWRITTEN, NOT appended!"""
 
-progress = open("progress.txt", "w")
+    with open(file_name, "w") as progress_file:
 
-if 1 <= sum(total) <= 10:
-    print('Normal ups and downs')
-    progress.write(time.ctime() + " SCORE:" + str(sum(total)) + " MOOD: Normal ups and downs" + "\n")
+        if 1 <= sum(total) <= 10:
+            print('Normal ups and downs')
+            progress_file.write(time.ctime() + " SCORE:" + str(sum(total)) + " MOOD: Normal ups and downs" + "\n")
 
-elif 11 <= sum(total) <= 16:
-    print('Mild mood disturbance')
-    progress.write(time.ctime() + " SCORE:" + str(sum(total)) + " MOOD: Mild mood disturbance" + "\n")
+        elif 11 <= sum(total) <= 16:
+            print('Mild mood disturbance')
+            progress_file.write(time.ctime() + " SCORE:" + str(sum(total)) + " MOOD: Mild mood disturbance" + "\n")
 
-elif 17 <= sum(total) <= 20:
-    print('Borderline Depression')
-    progress.write(time.ctime() + " SCORE:" + str(sum(total)) + " MOOD: Borderline Depression" + "\n")
+        elif 17 <= sum(total) <= 20:
+            print('Borderline Depression')
+            progress_file.write(time.ctime() + " SCORE:" + str(sum(total)) + " MOOD: Borderline Depression" + "\n")
 
-elif 21 <= sum(total) <= 30:
-    print('Moderate Depression')
-    progress.write(time.ctime() + " SCORE:" + str(sum(total)) + " MOOD: Moderate Depression" + "\n")
+        elif 21 <= sum(total) <= 30:
+            print('Moderate Depression')
+            progress_file.write(time.ctime() + " SCORE:" + str(sum(total)) + " MOOD: Moderate Depression" + "\n")
 
-elif 31 <= sum(total) <= 40:
-    print('Severe Depression')
-    progress.write(time.ctime() + " SCORE:" + str(sum(total)) + " MOOD: Severe Depression" + "\n")
+        elif 31 <= sum(total) <= 40:
+            print('Severe Depression')
+            progress_file.write(time.ctime() + " SCORE:" + str(sum(total)) + " MOOD: Severe Depression" + "\n")
 
-elif 40 <= sum(total):
-    print('Extreme Depression')
-    progress.write(time.ctime() + " SCORE:" + str(sum(total)) + " MOOD: Extreme Depression" + "\n")
+        elif 40 <= sum(total):
+            print('Extreme Depression')
+            progress_file.write(time.ctime() + " SCORE:" + str(sum(total)) + " MOOD: Extreme Depression" + "\n")
 
-progress.close()
+
+if __name__ == '__main__':
+    questions()
+    write_progress_file()
 
