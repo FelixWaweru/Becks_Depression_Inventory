@@ -53,7 +53,7 @@ ans0 = [
         "I can sleep as well as usual.",
         "I am no more tired or fatigued than usual.",
         "I have not experienced any change in my appetite.",
-        "I am no more restless or wound up than usual.",
+        "I am no more restless or agitated than usual.",
         "I can concentrate as well as ever.",
         "I have not noticed any recent change in my interest in sex.",
         ]
@@ -77,9 +77,9 @@ ans1 = [
         "I don't sleep as well as I used to.",
         "I get tired or fatigued more easily than usual.",
         "My appetite is somewhat less or somewhat greater than usual.",
-        "I feel more restless or wound up than usual.",
+        "I feel more restless or agitated than usual.",
         "I can't concentrate as well as usual.",
-        "I am less interested in sex than l used to be."
+        "I am less interested in sex than I used to be."
         ]
 
 ans2 = [
